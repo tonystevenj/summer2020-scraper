@@ -1,0 +1,14 @@
+.idea/
+data/*
+*.json
+envi/
+*.xml
+/out/
+*.xml
+.DS_Store
+*/*.log
+__pycache__
+*.pyc
+.vscode
+*.csv
+*.xls
