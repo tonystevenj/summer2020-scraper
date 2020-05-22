@@ -1,5 +1,5 @@
 import twint
-import requests
+import pandas as pd
 import re
 from bs4 import BeautifulSoup
 import requests
@@ -78,11 +78,24 @@ twint.run.Search(c)
 tweets_as_objects = twint.output.tweets_list
 # print(type(tweets_as_objects))
 # print(tweets_as_objects[0].id)
+dict_op = {
+        "CONTENT": [],
+        "TWEET_ID": [],
+        "USER_NAME": [],
+        "POST_DATE": [],
+        "POST_TIME": [],
+        "LINK": [],
+        "URL_INCLUDED": [],
+        "RETWEETS_COUNT": [],
+        "RETWEETS_PEOPLE": [],
+        "LIKES_AMOUNT": [],
+        "REPLIIES_AMOUNT": [],
+        "REPLAY_PEOPLE": []
+}
 for tweet in tweets_as_objects:
     id = tweet.id
     name = tweet.username
     # print(name,"HHHHHHHHHHHHHHHHHHHHHHHH")
-    url = tweet.urls
     likes_amount = tweet.likes_count
     retweets_count = tweet.retweets_count
     replies_count = tweet.replies_count
@@ -92,7 +105,7 @@ for tweet in tweets_as_objects:
         " USER_NAME: ", str(name),
         " POST_DATE: ",tweet.datestamp,
         " POST_TIME: ",tweet.timestamp,
-        " URL: ", url,
+        " LINK: ", tweet.link,
         " URL_INCLUDED: ", tweet.urls,
         " RETWEETS_COUNT: ", retweets_count,
         " RETWEETS_PEOPLE: ", get_retweeters_list(id),
@@ -100,3 +113,19 @@ for tweet in tweets_as_objects:
         " REPLIIES_AMOUNT: ", replies_count,
         " REPLAY_PEOPLE: ", getReplyer(name, id)
     )
+    dict_op["CONTENT"].append(tweet.tweet)
+    dict_op["TWEET_ID"].append(str(id))
+    dict_op["USER_NAME"].append(str(name))
+    dict_op["POST_DATE"].append(tweet.datestamp)
+    dict_op["POST_TIME"].append(tweet.timestamp)
+    dict_op["LINK"].append(tweet.link)
+    dict_op["URL_INCLUDED"].append(tweet.urls)
+    dict_op["RETWEETS_COUNT"].append(retweets_count)
+    dict_op["RETWEETS_PEOPLE"].append(get_retweeters_list(id))
+    dict_op["LIKES_AMOUNT"].append(likes_amount)
+    dict_op["REPLIIES_AMOUNT"].append(replies_count)
+    dict_op["REPLAY_PEOPLE"].append(getReplyer(name, id))
+print(dict_op["TWEET_ID"])
+df = pd.DataFrame(data=dict_op)
+print(df["TWEET_ID"])
+df.to_csv("/test.csv",encoding='utf-8',index=False,sep='|')
