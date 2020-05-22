@@ -5,9 +5,8 @@ from bs4 import BeautifulSoup
 import requests
 
 
-def getReplyer(name,id):
-
-    url = "https://twitter.com/"+str(name)+"/status/" + str(id)
+def getReplyer(name, id):
+    url = "https://twitter.com/" + str(name) + "/status/" + str(id)
     # print(url)
     f = requests.get(url)  # Get该网页从而获取该html内容
     soup = BeautifulSoup(f.content, "lxml")  # 用lxml解析器解析该网页的内容, 好像f.text也是返回的html
@@ -30,10 +29,18 @@ def getReplyer(name,id):
         # print(stream_items)
         replies_to_users = []
         for k in stream_items:
-            username = k.find('b').text.strip('@')
+
+            try:
+                username = k.find('b').text.strip('@')
+                time = k.find('small', 'time').find('a')['title']
+            except:
+                continue
+
             #        username = "".join(username.split())
             #         print(username)
+            #         print(time)
             replies_to_users.append(username)
+            replies_to_users.append(time)
         # print(replies_to_users)
         return replies_to_users
 
@@ -53,11 +60,9 @@ def get_retweeters_list(tweet_id):
 
 # Configure
 c = twint.Config()
-c.Username = "realDonaldTrump"
-# c.Search = "COVID 19"
+# c.Username = "realDonaldTrump"
+c.Search = "coronavirus"
 c.Limit = 10
-
-
 # c.Tweet_id = "1257793742540386304"
 c.Show_hashtags = True
 c.Get_replies = True
@@ -71,18 +76,27 @@ c.Store_object = True
 twint.run.Search(c)
 
 tweets_as_objects = twint.output.tweets_list
-print(type(tweets_as_objects))
+# print(type(tweets_as_objects))
 # print(tweets_as_objects[0].id)
 for tweet in tweets_as_objects:
     id = tweet.id
     name = tweet.username
     # print(name,"HHHHHHHHHHHHHHHHHHHHHHHH")
-    likes_amount  = tweet.likes_count
+    url = tweet.urls
+    likes_amount = tweet.likes_count
     retweets_count = tweet.retweets_count
     replies_count = tweet.replies_count
-    print(str(id), ":",
-          " replay_people : ", getReplyer(name,id),
-          " retweet_people : ",get_retweeters_list(id),
-          " likes_amount : ",likes_amount,
-          " retweets_count : ",retweets_count,
-          " replies_count : ",replies_count)
+    print(
+        " CONTENT: ", tweet.tweet,
+        " TWEET_ID: ", str(id),
+        " USER_NAME: ", str(name),
+        " POST_DATE: ",tweet.datestamp,
+        " POST_TIME: ",tweet.timestamp,
+        " URL: ", url,
+        " URL_INCLUDED: ", tweet.urls,
+        " RETWEETS_COUNT: ", retweets_count,
+        " RETWEETS_PEOPLE: ", get_retweeters_list(id),
+        " LIKES_AMOUNT: ", likes_amount,
+        " REPLIIES_AMOUNT: ", replies_count,
+        " REPLAY_PEOPLE: ", getReplyer(name, id)
+    )
