@@ -128,4 +128,4 @@ for tweet in tweets_as_objects:
 print(dict_op["TWEET_ID"])
 df = pd.DataFrame(data=dict_op)
 print(df["TWEET_ID"])
-df.to_csv("/test.csv",encoding='utf-8',index=False,sep='|')
+df.to_csv("/test.csv",encoding='utf-8',index=False,sep="|")
