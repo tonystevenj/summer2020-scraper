@@ -27,26 +27,27 @@ def getReplyer(name, id):
         replies_to_users = []
     else:
         stream_items = \
-            soup.find_all('div', 'stream-item-header')
+            soup.find_all('div', 'content')
         # print(stream_items)
         replies_to_users = []
         for k in stream_items:
 
             try:
-                username = k.find('b').text.strip('@')
+                username = k.find('div', class_='stream-item-header').find('b').text.strip('@')
  #              time = k.find('small', 'time').find('a')['title']
-                time = int(k.find('small', 'time').find("span", "_timestamp")["data-time-ms"])
+                time = int(k.find('div', class_='stream-item-header').find('small', 'time').find("span", "_timestamp")["data-time-ms"])
  #              datestamp = strftime("%Y-%m-%d", localtime(time/1000.0))
                 timestamp = strftime("%Y-%m-%d,%H:%M:%S", localtime(time/1000.0))
+                replytext = k.find('div', class_='js-tweet-text-container').find('p', 'tweet-text').text or ""
 
             except:
                 continue
-
             #        username = "".join(username.split())
             #         print(username)
             #         print(time)
             replies_to_users.append(username)
             replies_to_users.append(timestamp)
+            replies_to_users.append(replytext)
         # print(replies_to_users)
         return replies_to_users
 
