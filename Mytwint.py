@@ -4,7 +4,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 from time import strftime, localtime
-
+import datetime
 
 
 def getReplyer(name, id):
@@ -22,14 +22,13 @@ def getReplyer(name, id):
         'span', 'ProfileTweet-action--reply u-hiddenVisually').find(
         'span', 'ProfileTweet-actionCount')['data-tweet-stat-count'] or '0')
     is_replied = False if replies == 0 else True
-
+    replies_to_users = []
     if is_replied == False:
-        replies_to_users = []
+        pass
     else:
         stream_items = \
             soup.find_all('div', 'content')
         # print(stream_items)
-        replies_to_users = []
         for k in stream_items:
 
             try:
@@ -80,6 +79,7 @@ c.Count = True
 # Run
 # twint.run.Profile(c)
 c.Store_object = True
+c.Until =str(datetime.datetime.now())[:18]
 twint.run.Search(c)
 
 tweets_as_objects = twint.output.tweets_list
@@ -114,7 +114,7 @@ for tweet in tweets_as_objects:
         " POST_TIME: ",tweet.timestamp,
         " LINK: ", tweet.link,
         " URL_INCLUDED: ", tweet.urls,
-        " RETWEETS_COUNT: ", retweets_count,
+        " RETWEETS_COUNT: ", len(get_retweeters_list(id)),
         " RETWEETS_PEOPLE: ", get_retweeters_list(id),
         " LIKES_AMOUNT: ", likes_amount,
         " REPLIIES_AMOUNT: ", replies_count,
