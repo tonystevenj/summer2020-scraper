@@ -6,8 +6,8 @@ import requests
 def getReplyer(id):
     url = "https://twitter.com/BryanAlexander/status/1250937008081514498"
     url="https://twitter.com/realdonaldtrump/status/1261793147069366279"
-    f = requests.get(url)                 #Get该网页从而获取该html内容
-    soup = BeautifulSoup(f.content, "lxml")  #用lxml解析器解析该网页的内容, 好像f.text也是返回的html
+    f = requests.get(url)                 
+    soup = BeautifulSoup(f.content, "lxml")  
     #print(f.text)
 
     #@classmethod
