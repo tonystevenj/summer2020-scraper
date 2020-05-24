@@ -1,8 +1,10 @@
 import twint
 import pandas as pd
 import re
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
+from time import strftime, localtime
+
 
 
 def getReplyer(name, id):
@@ -32,7 +34,11 @@ def getReplyer(name, id):
 
             try:
                 username = k.find('b').text.strip('@')
-                time = k.find('small', 'time').find('a')['title']
+ #              time = k.find('small', 'time').find('a')['title']
+                time = int(k.find('small', 'time').find("span", "_timestamp")["data-time-ms"])
+ #              datestamp = strftime("%Y-%m-%d", localtime(time/1000.0))
+                timestamp = strftime("%Y-%m-%d,%H:%M:%S", localtime(time/1000.0))
+
             except:
                 continue
 
@@ -40,7 +46,7 @@ def getReplyer(name, id):
             #         print(username)
             #         print(time)
             replies_to_users.append(username)
-            replies_to_users.append(time)
+            replies_to_users.append(timestamp)
         # print(replies_to_users)
         return replies_to_users
 
