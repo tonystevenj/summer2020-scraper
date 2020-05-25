@@ -68,8 +68,8 @@ def get_retweeters_list(tweet_id):
 
 # Configure
 c = twint.Config()
-# c.Username = "realDonaldTrump"
-c.Search = "coronavirus"
+c.Username = "realDonaldTrump"
+# c.Search = "coronavirus"
 c.Limit = 10
 # c.Tweet_id = "1257793742540386304"
 c.Show_hashtags = True
@@ -82,7 +82,11 @@ c.Lang = "en"
 # Run
 # twint.run.Profile(c)
 c.Store_object = True
-c.Until =str(datetime.datetime.now())[:18]
+c.Since = "2020-01-01 00:00:00"
+c.Until ="2020-03-01 00:00:00"
+# c.Until =str(datetime.datetime.now())[:19]
+# print(str(datetime.datetime.now())[:19])
+# exit()
 twint.run.Search(c)
 
 tweets_as_objects = twint.output.tweets_list
