@@ -23,6 +23,8 @@ def getReplyer(name, id):
         'span', 'ProfileTweet-actionCount')['data-tweet-stat-count'] or '0')
     is_replied = False if replies == 0 else True
     replies_to_users = []
+    replies_time = []
+    replies_content = []
     if is_replied == False:
         pass
     else:
@@ -45,10 +47,10 @@ def getReplyer(name, id):
             #         print(username)
             #         print(time)
             replies_to_users.append(username)
-            replies_to_users.append(timestamp)
-            replies_to_users.append(replytext)
+            replies_time.append(timestamp)
+            replies_content.append(replytext)
         # print(replies_to_users)
-        return replies_to_users
+    return replies_to_users,replies_time,replies_content
 
 
 def get_retweeters_list(tweet_id):
@@ -75,6 +77,7 @@ c.Get_replies = True
 c.Verified = True
 c.Stats = True
 c.Count = True
+c.Lang = "en"
 # print(get_retweeters_list("1258837711806496770"))
 # Run
 # twint.run.Profile(c)
@@ -97,7 +100,10 @@ dict_op = {
         "RETWEETS_PEOPLE": [],
         "LIKES_AMOUNT": [],
         "REPLIIES_AMOUNT": [],
-        "REPLAY_PEOPLE": []
+        "REPLAY_PEOPLE": [],
+        "REPLAY_TIME": [],
+        "REPLAY_CONTENT": []
+
 }
 for tweet in tweets_as_objects:
     id = tweet.id
@@ -106,6 +112,10 @@ for tweet in tweets_as_objects:
     likes_amount = tweet.likes_count
     retweets_count = tweet.retweets_count
     replies_count = tweet.replies_count
+    replies_people=[]
+    replies_time=[]
+    replies_content=[]
+    replies_people, replies_time, replies_content=getReplyer(name, id)
     print(
         " CONTENT: ", tweet.tweet,
         " TWEET_ID: ", str(id),
@@ -117,8 +127,10 @@ for tweet in tweets_as_objects:
         " RETWEETS_COUNT: ", len(get_retweeters_list(id)),
         " RETWEETS_PEOPLE: ", get_retweeters_list(id),
         " LIKES_AMOUNT: ", likes_amount,
-        " REPLIIES_AMOUNT: ", replies_count,
-        " REPLAY_PEOPLE: ", getReplyer(name, id)
+        " REPLIIES_AMOUNT: ", len(replies_people),
+        " REPLAY_PEOPLE: ", replies_people,
+        " REPLAY_TIME: ", replies_time,
+        " REPLAY_CONTENT: ", replies_content
     )
     dict_op["CONTENT"].append(tweet.tweet)
     dict_op["TWEET_ID"].append(str(id))
@@ -127,13 +139,15 @@ for tweet in tweets_as_objects:
     dict_op["POST_TIME"].append(tweet.timestamp)
     dict_op["LINK"].append(tweet.link)
     dict_op["URL_INCLUDED"].append(tweet.urls)
-    dict_op["RETWEETS_COUNT"].append(retweets_count)
+    dict_op["RETWEETS_COUNT"].append(len(get_retweeters_list(id)))
     dict_op["RETWEETS_PEOPLE"].append(get_retweeters_list(id))
     dict_op["LIKES_AMOUNT"].append(likes_amount)
-    dict_op["REPLIIES_AMOUNT"].append(replies_count)
-    dict_op["REPLAY_PEOPLE"].append(getReplyer(name, id))
-print(dict_op["TWEET_ID"])
+    dict_op["REPLIIES_AMOUNT"].append(len(replies_people))
+    dict_op["REPLAY_PEOPLE"].append(replies_people)
+    dict_op["REPLAY_TIME"].append(replies_time)
+    dict_op["REPLAY_CONTENT"].append(replies_content)
+# print(dict_op["TWEET_ID"])
 df = pd.DataFrame(data=dict_op)
-print(df["TWEET_ID"])
-df.to_csv("test.csv",encoding='utf-8',index=False,sep=",")
+# print(df["TWEET_ID"])
+# df.to_csv("test.csv",encoding='utf-8',index=False,sep=",")
 df.to_json("test.json",orient='records')
