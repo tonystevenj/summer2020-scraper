@@ -68,9 +68,9 @@ def get_retweeters_list(tweet_id):
 
 # Configure
 c = twint.Config()
-c.Username = "realDonaldTrump"
-# c.Search = "coronavirus"
-c.Limit = 10
+# c.Username = "realDonaldTrump"
+c.Search = "coronavirus"
+# c.Limit = 10
 # c.Tweet_id = "1257793742540386304"
 c.Show_hashtags = True
 c.Get_replies = True
@@ -82,8 +82,8 @@ c.Lang = "en"
 # Run
 # twint.run.Profile(c)
 c.Store_object = True
-c.Since = "2020-01-01 00:00:00"
-c.Until ="2020-03-01 00:00:00"
+c.Since = "2020-01-30 00:00:00"
+c.Until ="2020-02-01 00:00:00"
 # c.Until =str(datetime.datetime.now())[:19]
 # print(str(datetime.datetime.now())[:19])
 # exit()
@@ -109,6 +109,7 @@ dict_op = {
         "REPLAY_CONTENT": []
 
 }
+count =0
 for tweet in tweets_as_objects:
     id = tweet.id
     name = tweet.username
@@ -117,10 +118,12 @@ for tweet in tweets_as_objects:
     retweets_count = tweet.retweets_count
     replies_count = tweet.replies_count
     replies_people=[]
+
     replies_time=[]
     replies_content=[]
     replies_people, replies_time, replies_content=getReplyer(name, id)
     print(
+        count,
         " CONTENT: ", tweet.tweet,
         " TWEET_ID: ", str(id),
         " USER_NAME: ", str(name),
@@ -150,8 +153,23 @@ for tweet in tweets_as_objects:
     dict_op["REPLAY_PEOPLE"].append(replies_people)
     dict_op["REPLAY_TIME"].append(replies_time)
     dict_op["REPLAY_CONTENT"].append(replies_content)
-# print(dict_op["TWEET_ID"])
-df = pd.DataFrame(data=dict_op)
-# print(df["TWEET_ID"])
-# df.to_csv("test.csv",encoding='utf-8',index=False,sep=",")
-df.to_json("test.json",orient='records')
+    count+=1
+    if count%100==0 and count!=0:
+        df = pd.DataFrame(data=dict_op)
+        df.to_json(f"{count} COVID-19.json",orient='records')
+        dict_op = {
+            "CONTENT": [],
+            "TWEET_ID": [],
+            "USER_NAME": [],
+            "POST_DATE": [],
+            "POST_TIME": [],
+            "LINK": [],
+            "URL_INCLUDED": [],
+            "RETWEETS_COUNT": [],
+            "RETWEETS_PEOPLE": [],
+            "LIKES_AMOUNT": [],
+            "REPLIIES_AMOUNT": [],
+            "REPLAY_PEOPLE": [],
+            "REPLAY_TIME": [],
+            "REPLAY_CONTENT": []
+        }
