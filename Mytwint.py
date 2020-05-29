@@ -78,9 +78,7 @@ def twintScraper(from_date=None, end_date=None):
     c.Hide_output = True
     # c.Resume = "1223026504482918405"
     # print(get_retweeters_list("1258837711806496770"))
-    # Run
     # twint.run.Profile(c)
-    #
     c.Store_object = True
     # c.Since = "2020-01-30 00:00:00"
     # c.Until ="2020-02-01 00:00:00"
@@ -92,8 +90,7 @@ def twintScraper(from_date=None, end_date=None):
     twint.run.Search(c)
 
     tweets_as_objects = twint.output.tweets_list
-    # print(type(tweets_as_objects))
-    # print(tweets_as_objects[0].id)
+    print(len(tweets_as_objects))
     dict_op = {
             "CONTENT": [],
             "TWEET_ID": [],
@@ -156,8 +153,8 @@ def twintScraper(from_date=None, end_date=None):
         dict_op["REPLAY_TIME"].append(replies_time)
         dict_op["REPLAY_CONTENT"].append(replies_content)
         count+=1
-        if count%200==0 and count!=0:
-            lastsavedtweetid = dict_op["TWEET_ID"][199]
+        if (count%200==0 and count!=0) or count==len(tweets_as_objects):
+            lastsavedtweetid = dict_op["TWEET_ID"][len(dict_op["TWEET_ID"])-1]
             print(f"SAVE_MARK {count}: lasts aved tweetid = ",lastsavedtweetid)
             df = pd.DataFrame(data=dict_op)
             df.to_json(f"{from_date} {count} COVID-19.json",orient='records')
@@ -179,6 +176,7 @@ def twintScraper(from_date=None, end_date=None):
             }
         if count%1000==0 and count!=0:
             time.sleep(60.0)
+
 # c.Since = "2020-01-30 00:00:00"
 # c.Until ="2020-02-01 00:00:00"
 
@@ -187,12 +185,14 @@ def twintScraper(from_date=None, end_date=None):
 # twintScraper(from_date="2020-01-29" ,end_date="2020-01-30" )
 # twintScraper(from_date="2020-01-28" ,end_date="2020-01-29" )
 # twintScraper(from_date="2020-01-27" ,end_date="2020-01-28" )
+# twintScraper(from_date="2020-01-26" ,end_date="2020-01-27" )
 
-for i in reversed(range(10,24)):
+for i in reversed(range(10,26)):
     from_date = f"2020-01-{i}"
     end_date = f"2020-01-{i+1}"
     print(f"DAY_MARK: ",from_date," ",end_date)
     try:
+        twint.output.tweets_list = []
         twintScraper(from_date=from_date ,end_date=end_date )
     except:
         pass
