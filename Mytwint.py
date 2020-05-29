@@ -90,7 +90,7 @@ def twintScraper(from_date=None, end_date=None):
     twint.run.Search(c)
 
     tweets_as_objects = twint.output.tweets_list
-    print(len(tweets_as_objects))
+    print("Real tweets amount: ", len(tweets_as_objects))
     dict_op = {
             "CONTENT": [],
             "TWEET_ID": [],
