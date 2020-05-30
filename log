@@ -1,96 +1,143 @@
+
+January:
+
 第一天跑了 1700， 时间是
 1223395534809026561 2020-01-31 18:59:59 ??2???¨¢?¨º¡À <skift> Man
 。。。。。。
 1223350403674386438 2020-01-31 16:00:39 ??2???¨¢?¨º¡À <ABCPolitics> BREAKING: Trump adm
 
-
+D:\anaconda\envs\2020_Summer_Scraper\python.exe F:/pycharm-workspace/2020_Summer_Scraper/Mytwint.py
+DAY_MARK:  2020-01-25   2020-01-26
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 1.0 secs
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 8.0 secs
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 27.0 secs
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 64.0 secs
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 125.0 secs
+[+] Finished: Successfully collected 3200 Tweets.
+3200
+SAVE_MARK 200: lasts aved tweetid =  1221207400662913024
+SAVE_MARK 400: lasts aved tweetid =  1221194729674563585
+SAVE_MARK 600: lasts aved tweetid =  1221176676366708739
+SAVE_MARK 800: lasts aved tweetid =  1221154173342842888
+SAVE_MARK 1000: lasts aved tweetid =  1221131367888502784
+SAVE_MARK 1200: lasts aved tweetid =  1221115204257316864
+SAVE_MARK 1400: lasts aved tweetid =  1221097897271283712
+SAVE_MARK 1600: lasts aved tweetid =  1221082683196964867
+SAVE_MARK 1800: lasts aved tweetid =  1221067630741577728
+SAVE_MARK 2000: lasts aved tweetid =  1221053667731701761
+SAVE_MARK 2200: lasts aved tweetid =  1221038957275668481
+SAVE_MARK 2400: lasts aved tweetid =  1221018853934817280
+SAVE_MARK 2600: lasts aved tweetid =  1221002655922700288
+SAVE_MARK 2800: lasts aved tweetid =  1220987504146419712
+SAVE_MARK 3000: lasts aved tweetid =  1220970030403346432
+SAVE_MARK 3199: lasts aved tweetid =  1220949420008624129
+SAVE_MARK 3200: lasts aved tweetid =  1220949321971052549
+DAY_MARK:  2020-01-24   2020-01-25
+[+] Finished: Successfully collected 3200 Tweets.
+3200
+SAVE_MARK 200: lasts aved tweetid =  1220848093102530561
+SAVE_MARK 400: lasts aved tweetid =  1220837190902538241
+SAVE_MARK 600: lasts aved tweetid =  1220829370060890113
+SAVE_MARK 800: lasts aved tweetid =  1220820119980429313
+SAVE_MARK 1000: lasts aved tweetid =  1220811537318846466
 DAY_MARK:  2020-01-23   2020-01-24
 [+] Finished: Successfully collected 3200 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+3200
+SAVE_MARK 200: lasts aved tweetid =  1220481675336933376
 SAVE_MARK 400: lasts aved tweetid =  1220466246724063232
 SAVE_MARK 600: lasts aved tweetid =  1220454243989184519
 SAVE_MARK 800: lasts aved tweetid =  1220441787543773185
-SAVE_MARK 1000: lasts aved tweetid =  1220431397954998275
-SAVE_MARK 1200: lasts aved tweetid =  1220420534099501056
-SAVE_MARK 1400: lasts aved tweetid =  1220412666889625600
-SAVE_MARK 1600: lasts aved tweetid =  1220402098111643648
-SAVE_MARK 1800: lasts aved tweetid =  1220391744526790657
+SAVE_MARK 1000: lasts aved tweetid =  1220431491928403970
+SAVE_MARK 1200: lasts aved tweetid =  1220420634444029952
+SAVE_MARK 1400: lasts aved tweetid =  1220412773252980739
+SAVE_MARK 1600: lasts aved tweetid =  1220402421551243264
+SAVE_MARK 1800: lasts aved tweetid =  1220391830916866049
+SAVE_MARK 2000: lasts aved tweetid =  1220380141131640832
+SAVE_MARK 2200: lasts aved tweetid =  1220370606102925313
+SAVE_MARK 2400: lasts aved tweetid =  1220362105821519873
+SAVE_MARK 2600: lasts aved tweetid =  1220353229013377026
+SAVE_MARK 2800: lasts aved tweetid =  1220344188828561408
+SAVE_MARK 3000: lasts aved tweetid =  1220334825929953281
+SAVE_MARK 3199: lasts aved tweetid =  1220323072521064448
+SAVE_MARK 3200: lasts aved tweetid =  1220323064627503104
 DAY_MARK:  2020-01-22   2020-01-23
 [+] Finished: Successfully collected 3200 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
-SAVE_MARK 400: lasts aved tweetid =  1220466246724063232
-SAVE_MARK 600: lasts aved tweetid =  1220454243989184519
-SAVE_MARK 800: lasts aved tweetid =  1220441787543773185
-SAVE_MARK 1000: lasts aved tweetid =  1220431397954998275
-SAVE_MARK 1200: lasts aved tweetid =  1220420534099501056
-SAVE_MARK 1400: lasts aved tweetid =  1220412666889625600
-SAVE_MARK 1600: lasts aved tweetid =  1220402098111643648
-SAVE_MARK 1800: lasts aved tweetid =  1220391744526790657
-SAVE_MARK 2000: lasts aved tweetid =  1220379961158258688
-SAVE_MARK 2200: lasts aved tweetid =  1220370415039733760
-SAVE_MARK 2400: lasts aved tweetid =  1220362048376385537
-SAVE_MARK 2600: lasts aved tweetid =  1220353091092058112
-SAVE_MARK 2800: lasts aved tweetid =  1220344180867616771
-SAVE_MARK 3000: lasts aved tweetid =  1220334586435162114
-SAVE_MARK 3200: lasts aved tweetid =  1220322886843600897
-SAVE_MARK 3400: lasts aved tweetid =  1220113067834372096
-SAVE_MARK 3600: lasts aved tweetid =  1220093448654671876
-SAVE_MARK 3800: lasts aved tweetid =  1220080186567217152
-SAVE_MARK 4000: lasts aved tweetid =  1220072390044127233
-SAVE_MARK 4200: lasts aved tweetid =  1220058865087152128
-SAVE_MARK 4400: lasts aved tweetid =  1220037577148977154
+3179
+SAVE_MARK 200: lasts aved tweetid =  1220113038180802560
+SAVE_MARK 400: lasts aved tweetid =  1220093203157790721
+SAVE_MARK 600: lasts aved tweetid =  1220079798548094976
+SAVE_MARK 800: lasts aved tweetid =  1220072354300211201
+SAVE_MARK 1000: lasts aved tweetid =  1220058800985661440
+SAVE_MARK 1200: lasts aved tweetid =  1220037455186886657
 DAY_MARK:  2020-01-21   2020-01-22
-[+] Finished: Successfully collected 2969 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
-SAVE_MARK 400: lasts aved tweetid =  1220466246724063232
-SAVE_MARK 600: lasts aved tweetid =  1220454243989184519
-SAVE_MARK 800: lasts aved tweetid =  1220441787543773185
-SAVE_MARK 1000: lasts aved tweetid =  1220431397954998275
-SAVE_MARK 1200: lasts aved tweetid =  1220420534099501056
-SAVE_MARK 1400: lasts aved tweetid =  1220412666889625600
-SAVE_MARK 1600: lasts aved tweetid =  1220402098111643648
-SAVE_MARK 1800: lasts aved tweetid =  1220391744526790657
-SAVE_MARK 2000: lasts aved tweetid =  1220379961158258688
-SAVE_MARK 2200: lasts aved tweetid =  1220370415039733760
-SAVE_MARK 2400: lasts aved tweetid =  1220362048376385537
-SAVE_MARK 2600: lasts aved tweetid =  1220353091092058112
-SAVE_MARK 2800: lasts aved tweetid =  1220344180867616771
-SAVE_MARK 3000: lasts aved tweetid =  1220334586435162114
-SAVE_MARK 3200: lasts aved tweetid =  1220322886843600897
-SAVE_MARK 3400: lasts aved tweetid =  1220113067834372096
-SAVE_MARK 3600: lasts aved tweetid =  1220093448654671876
-SAVE_MARK 3800: lasts aved tweetid =  1220080186567217152
-SAVE_MARK 4000: lasts aved tweetid =  1220072390044127233
-SAVE_MARK 4200: lasts aved tweetid =  1220058865087152128
-SAVE_MARK 4400: lasts aved tweetid =  1220037577148977154
+[+] Finished: Successfully collected 2970 Tweets.
+2614
+SAVE_MARK 200: lasts aved tweetid =  1219746498138820615
+SAVE_MARK 400: lasts aved tweetid =  1219729324820987907
+SAVE_MARK 600: lasts aved tweetid =  1219716203138056193
+SAVE_MARK 800: lasts aved tweetid =  1219706840226779136
+SAVE_MARK 1000: lasts aved tweetid =  1219701934380240898
+SAVE_MARK 1200: lasts aved tweetid =  1219696432346796033
+SAVE_MARK 1400: lasts aved tweetid =  1219684141228265475
+SAVE_MARK 1600: lasts aved tweetid =  1219649551310761986
+SAVE_MARK 1800: lasts aved tweetid =  1219617191101894656
+SAVE_MARK 2000: lasts aved tweetid =  1219592477566492676
+SAVE_MARK 2200: lasts aved tweetid =  1219559534907338753
+SAVE_MARK 2400: lasts aved tweetid =  1219520654409715712
+SAVE_MARK 2600: lasts aved tweetid =  1219487343180222464
+SAVE_MARK 2613: lasts aved tweetid =  1219484814648250368
 DAY_MARK:  2020-01-20   2020-01-21
 [+] Finished: Successfully collected 896 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+757
+SAVE_MARK 200: lasts aved tweetid =  1219341842531209223
+SAVE_MARK 400: lasts aved tweetid =  1219287739377442816
+SAVE_MARK 600: lasts aved tweetid =  1219212227334377473
+SAVE_MARK 756: lasts aved tweetid =  1219122618906882048
 DAY_MARK:  2020-01-19   2020-01-20
 [+] Finished: Successfully collected 174 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+144
+SAVE_MARK 143: lasts aved tweetid =  1218765025155772416
 DAY_MARK:  2020-01-18   2020-01-19
 [+] Finished: Successfully collected 188 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+136
+SAVE_MARK 135: lasts aved tweetid =  1218399862800121856
 DAY_MARK:  2020-01-17   2020-01-18
-[+] Finished: Successfully collected 265 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+[+] Finished: Successfully collected 266 Tweets.
+240
+SAVE_MARK 200: lasts aved tweetid =  1218091336013885440
+SAVE_MARK 239: lasts aved tweetid =  1218036818139963393
 DAY_MARK:  2020-01-16   2020-01-17
 [+] Finished: Successfully collected 160 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+118
+SAVE_MARK 117: lasts aved tweetid =  1217674416936480768
 DAY_MARK:  2020-01-15   2020-01-16
 [+] Finished: Successfully collected 70 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+57
+SAVE_MARK 56: lasts aved tweetid =  1217318020332302337
 DAY_MARK:  2020-01-14   2020-01-15
 [+] Finished: Successfully collected 88 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+79
+SAVE_MARK 78: lasts aved tweetid =  1216955602607509505
 DAY_MARK:  2020-01-13   2020-01-14
 [+] Finished: Successfully collected 69 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+69
+SAVE_MARK 68: lasts aved tweetid =  1216600260883046400
 DAY_MARK:  2020-01-12   2020-01-13
 [+] Finished: Successfully collected 33 Tweets.
-SAVE_MARK 200: lasts aved tweetid =  1220481660958973964
+29
+SAVE_MARK 28: lasts aved tweetid =  1216248423440994305
 DAY_MARK:  2020-01-11   2020-01-12
-[+] Finished: Successfully collected 153 Tweets.
+[+] Finished: Successfully collected 155 Tweets.
+101
+SAVE_MARK 100: lasts aved tweetid =  1215861140619714560
+DAY_MARK:  2020-01-10   2020-01-11
+[+] Finished: Successfully collected 41 Tweets.
+32
+SAVE_MARK 31: lasts aved tweetid =  1215525739048493056
 
-Process finished with exit code -1
+Process finished with exit code 0
