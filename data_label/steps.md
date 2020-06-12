@@ -11,3 +11,10 @@ The data are in **json** format, here is one sample:
 * Check the URL link in the content: for example, you can put the link in above sample into browser, then the link will give you some info. If the link points to virus or illgal content, then it must be a spam. If it points to legal web, then based on former steps and it looks fine, we can label it as ** '**non-spam**' **.
 * If you cannot make sure about the news, you can search the related keyword in google to find it is fake or real news. It may take some time to identify it.
 * If all above steps still cannot identify the tweet, then you can search it in Twitter. If no any labels (rumor, malicious, ...) in Twitter, we can label it as ** '**non-spam**' **.
+
+## The steps for labelling:
+
+You can directly modify the original json file like:
+
+{"CONTENT":"\u201cThe fatality rate [of the coronavirus] xxx
+"REPLAY_PEOPLE":[],"REPLAY_TIME":[],"REPLAY_CONTENT":[],**"LABEL":"1"**},
