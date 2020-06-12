@@ -11,7 +11,7 @@ def getReplyer(name, id):
     replies_content = []
     url = "https://twitter.com/" + str(name) + "/status/" + str(id)
     # print(url)
-    f = requests.get(url)  
+    f = requests.get(url, headers={"X-Requested-With": "XMLHttpRequest"})  
     soup = BeautifulSoup(f.content, "lxml")  
     # print(f.text)
 
