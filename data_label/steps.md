@@ -6,7 +6,7 @@ The data are in **json** format, here is one sample:
 
 ## The steps for labelling:
 
-* Focus on the content: read through the text of tweet. If the content contains words like: click this video, click this link, follow me, look at the video... be careful!! It may be a ```diff +**spam** ```.
+* Focus on the content: read through the text of tweet. If the content contains words like: click this video, click this link, follow me, look at the video... be careful!! It may be a <div class="text-blue mb-2">**spam** </div>.
 * Manually check the content: you can put the tweet into Google and search it. Google will give some info about the content, if it looks like rumor or had been notified as rumor/spam in goole, then you can lable it as **spam**.
 * Check the URL link in the content: for example, you can put the link in above sample into browser, then the link will give you some info. If the link points to virus or illgal content, then it must be a spam. If it points to legal web, then based on former steps and it looks fine, we can label it as **non-spam**.
 * If you cannot make sure about the news, you can search the related keyword in google to find it is fake or real news. It may take some time to identify it.
