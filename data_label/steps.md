@@ -12,9 +12,8 @@ The data are in **json** format, here is one sample:
 * If you cannot make sure about the news, you can search the related keyword in google to find it is fake or real news. It may take some time to identify it.
 * If all above steps still cannot identify the tweet, then you can search it in Twitter. If no any labels (rumor, malicious, ...) in Twitter, we can label it as ** '**non-spam**' **.
 
-## The steps for labelling:
+## After labelling:
 
 You can directly modify the original json file like:
 
-{"CONTENT":"\u201cThe fatality rate [of the coronavirus] xxx
-"REPLAY_PEOPLE":[],"REPLAY_TIME":[],"REPLAY_CONTENT":[],**"LABEL":"1"**},
+{"CONTENT"xxx,"REPLAY_TIME":[],"REPLAY_CONTENT":[],**"LABEL":"1"**},
