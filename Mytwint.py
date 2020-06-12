@@ -6,6 +6,9 @@ from bs4 import BeautifulSoup
 from time import strftime, localtime
 import time
 def getReplyer(name, id):
+    replies_to_users = []
+    replies_time = []
+    replies_content = []
     url = "https://twitter.com/" + str(name) + "/status/" + str(id)
     # print(url)
     f = requests.get(url)  
@@ -16,13 +19,14 @@ def getReplyer(name, id):
 
     tweet_div = soup.find('div', 'tweet')
     # print(tweet_div)
-    replies = int(soup.find(
-        'span', 'ProfileTweet-action--reply u-hiddenVisually').find(
+    tem = soup.find(
+        'span', 'ProfileTweet-action--reply u-hiddenVisually')
+    if tem is None:
+        return replies_to_users,replies_time,replies_content
+    replies = int(tem.find(
         'span', 'ProfileTweet-actionCount')['data-tweet-stat-count'] or '0')
     is_replied = False if replies == 0 else True
-    replies_to_users = []
-    replies_time = []
-    replies_content = []
+
     if is_replied == False:
         pass
     else:
@@ -66,7 +70,7 @@ def twintScraper(from_date=None, end_date=None):
     c = twint.Config()
     # c.Username = "realDonaldTrump"
     c.Search = "coronavirus"
-    c.Limit = 3200
+    c.Limit = 4700
 
     # c.Tweet_id = "1257793742540386304"
     c.Show_hashtags = True
@@ -187,12 +191,27 @@ def twintScraper(from_date=None, end_date=None):
 # twintScraper(from_date="2020-01-27" ,end_date="2020-01-28" )
 # twintScraper(from_date="2020-01-26" ,end_date="2020-01-27" )
 
-for i in reversed(range(10,26)):
-    from_date = f"2020-01-{i}"
-    end_date = f"2020-01-{i+1}"
-    print(f"DAY_MARK: ",from_date," ",end_date)
-    try:
-        twint.output.tweets_list = []
-        twintScraper(from_date=from_date ,end_date=end_date )
-    except:
-        pass
+
+
+twintScraper(from_date="2020-02-29" ,end_date="2020-03-01" )
+# for i in reversed(range(10,14)):
+#     from_date = f"2020-02-{i}"
+#     end_date = f"2020-02-{i+1}"
+#     print(f"DAY_MARK: ",from_date," ",end_date)
+#     try:
+#         twint.output.tweets_list = []
+#         twintScraper(from_date=from_date ,end_date=end_date )
+#     except:
+#         pass
+
+# twintScraper(from_date="2020-01-09" ,end_date="2020-01-10" )
+# for i in reversed(range(0,9)):
+#     from_date = f"2020-01-0{i}"
+#     end_date = f"2020-01-0{i+1}"
+#     print(f"DAY_MARK: ",from_date," ",end_date)
+#     try:
+#         twint.output.tweets_list = []
+#         twintScraper(from_date=from_date ,end_date=end_date )
+#     except:
+#         pass
+

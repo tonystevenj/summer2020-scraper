@@ -141,3 +141,121 @@ DAY_MARK:  2020-01-10   2020-01-11
 SAVE_MARK 31: lasts aved tweetid =  1215525739048493056
 
 Process finished with exit code 0
+
+
+########################################################################################February###########################################:
+
+D:\anaconda\envs\2020_Summer_Scraper\python.exe F:/pycharm-workspace/2020_Summer_Scraper/Mytwint.py
+DAY_MARK:  2020-02-28   2020-02-29
+[+] Finished: Successfully collected 4700 Tweets.
+Real tweets amount:  4700
+SAVE_MARK 200: lasts aved tweetid =  1233539107105755138
+SAVE_MARK 400: lasts aved tweetid =  1233536202839642112
+SAVE_MARK 600: lasts aved tweetid =  1233533400520253443
+SAVE_MARK 800: lasts aved tweetid =  1233530389676875778
+SAVE_MARK 1000: lasts aved tweetid =  1233527471464685572
+SAVE_MARK 1200: lasts aved tweetid =  1233525313281413120
+SAVE_MARK 1400: lasts aved tweetid =  1233522660107333643
+SAVE_MARK 1600: lasts aved tweetid =  1233519764250734593
+SAVE_MARK 1800: lasts aved tweetid =  1233516885024616448
+SAVE_MARK 2000: lasts aved tweetid =  1233513992900923392
+SAVE_MARK 2200: lasts aved tweetid =  1233512143816994819
+SAVE_MARK 2400: lasts aved tweetid =  1233509217383976960
+SAVE_MARK 2600: lasts aved tweetid =  1233506240304762885
+SAVE_MARK 2800: lasts aved tweetid =  1233504396593397760
+SAVE_MARK 3000: lasts aved tweetid =  1233501549260935173
+SAVE_MARK 3200: lasts aved tweetid =  1233498985828143109
+SAVE_MARK 3400: lasts aved tweetid =  1233497100958281728
+SAVE_MARK 3600: lasts aved tweetid =  1233494373138157569
+SAVE_MARK 3800: lasts aved tweetid =  1233492246751780865
+SAVE_MARK 4000: lasts aved tweetid =  1233489774054342656
+SAVE_MARK 4200: lasts aved tweetid =  1233487879042719744
+SAVE_MARK 4400: lasts aved tweetid =  1233485523924156416
+SAVE_MARK 4600: lasts aved tweetid =  1233483141257531392
+SAVE_MARK 4700: lasts aved tweetid =  1233482160801288192
+DAY_MARK:  2020-02-27   2020-02-28
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 1.0 secs
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 1.0 secs
+[+] Finished: Successfully collected 4700 Tweets.
+Real tweets amount:  4700
+SAVE_MARK 200: lasts aved tweetid =  1233176037137276929
+SAVE_MARK 400: lasts aved tweetid =  1233172478874312709
+SAVE_MARK 600: lasts aved tweetid =  1233169205287161856
+SAVE_MARK 800: lasts aved tweetid =  1233165980357906432
+SAVE_MARK 1000: lasts aved tweetid =  1233163651546275841
+SAVE_MARK 1200: lasts aved tweetid =  1233160713692049408
+SAVE_MARK 1400: lasts aved tweetid =  1233158151203119111
+SAVE_MARK 1600: lasts aved tweetid =  1233155970441863170
+SAVE_MARK 1800: lasts aved tweetid =  1233153344451096577
+SAVE_MARK 2000: lasts aved tweetid =  1233150902879563779
+SAVE_MARK 2200: lasts aved tweetid =  1233148989341601797
+SAVE_MARK 2400: lasts aved tweetid =  1233146618343559175
+SAVE_MARK 2600: lasts aved tweetid =  1233144547489853452
+SAVE_MARK 2800: lasts aved tweetid =  1233142463218372608
+SAVE_MARK 3000: lasts aved tweetid =  1233140637807104000
+SAVE_MARK 3200: lasts aved tweetid =  1233138682951032832
+SAVE_MARK 3400: lasts aved tweetid =  1233136219443298311
+SAVE_MARK 3600: lasts aved tweetid =  1233134425933799425
+DAY_MARK:  2020-02-26   2020-02-27
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 1.0 secs
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 1.0 secs
+[+] Finished: Successfully collected 4700 Tweets.
+Real tweets amount:  4700
+SAVE_MARK 200: lasts aved tweetid =  1232816144609878016
+SAVE_MARK 400: lasts aved tweetid =  1232815073657143296
+SAVE_MARK 600: lasts aved tweetid =  1232814274873090048
+SAVE_MARK 800: lasts aved tweetid =  1232813205807943682
+SAVE_MARK 1000: lasts aved tweetid =  1232812168241766400
+SAVE_MARK 1200: lasts aved tweetid =  1232810848424546305
+SAVE_MARK 1400: lasts aved tweetid =  1232809126708645889
+SAVE_MARK 1600: lasts aved tweetid =  1232806232915836933
+SAVE_MARK 1800: lasts aved tweetid =  1232802936264093696
+SAVE_MARK 2000: lasts aved tweetid =  1232800071168798721
+SAVE_MARK 2200: lasts aved tweetid =  1232796230515748865
+SAVE_MARK 2400: lasts aved tweetid =  1232792881234092032
+SAVE_MARK 2600: lasts aved tweetid =  1232789173544902659
+SAVE_MARK 2800: lasts aved tweetid =  1232786496702369792
+SAVE_MARK 3000: lasts aved tweetid =  1232783156018704384
+SAVE_MARK 3200: lasts aved tweetid =  1232779948294836226
+SAVE_MARK 3400: lasts aved tweetid =  1232776626921803776
+SAVE_MARK 3600: lasts aved tweetid =  1232773767887278088
+SAVE_MARK 3800: lasts aved tweetid =  1232771232715726851
+SAVE_MARK 4000: lasts aved tweetid =  1232768070810251266
+SAVE_MARK 4200: lasts aved tweetid =  1232764823659786240
+SAVE_MARK 4400: lasts aved tweetid =  1232761064565157889
+SAVE_MARK 4600: lasts aved tweetid =  1232757994376564738
+SAVE_MARK 4700: lasts aved tweetid =  1232756838711615491
+DAY_MARK:  2020-02-25   2020-02-26
+CRITICAL:root:twint.run:Twint:Feed:noDataExpecting value: line 1 column 1 (char 0)
+sleeping for 1.0 secs
+[+] Finished: Successfully collected 4700 Tweets.
+Real tweets amount:  4700
+SAVE_MARK 200: lasts aved tweetid =  1232449335972876288
+SAVE_MARK 400: lasts aved tweetid =  1232444543909261312
+SAVE_MARK 600: lasts aved tweetid =  1232440259054452737
+SAVE_MARK 800: lasts aved tweetid =  1232436359094317056
+SAVE_MARK 1000: lasts aved tweetid =  1232432120221458433
+SAVE_MARK 1200: lasts aved tweetid =  1232428283930857473
+SAVE_MARK 1400: lasts aved tweetid =  1232424924033122304
+SAVE_MARK 1600: lasts aved tweetid =  1232420263033278466
+SAVE_MARK 1800: lasts aved tweetid =  1232416391216685057
+SAVE_MARK 2000: lasts aved tweetid =  1232412570725863425
+SAVE_MARK 2200: lasts aved tweetid =  1232409639519760385
+SAVE_MARK 2400: lasts aved tweetid =  1232405929070456833
+SAVE_MARK 2600: lasts aved tweetid =  1232402374821543936
+SAVE_MARK 2800: lasts aved tweetid =  1232398563394686977
+SAVE_MARK 3000: lasts aved tweetid =  1232394862319808512
+SAVE_MARK 3200: lasts aved tweetid =  1232391059935596546
+SAVE_MARK 3400: lasts aved tweetid =  1232388044541612032
+SAVE_MARK 3600: lasts aved tweetid =  1232385020817367041
+SAVE_MARK 3800: lasts aved tweetid =  1232382284705271810
+SAVE_MARK 4000: lasts aved tweetid =  1232379484386381824
+DAY_MARK:  2020-02-24   2020-02-25
+[+] Finished: Successfully collected 4700 Tweets.
+Real tweets amount:  4700
+
+Process finished with exit code -1
