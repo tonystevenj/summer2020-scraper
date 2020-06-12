@@ -1,0 +1,15 @@
+Here list the individual workload in data labeling
+
+For Janauary data:
+
+Huifeng: 100 COVID-19.json ---> 1700 COVID-19.json, 2020-01-24 200 COVID-19.json ---> 2020-01-25 3199 COVID-19.json
+Hongjing: 2020-01-01 1 COVID-19.json ---> 2020-01-17 239 COVID-19.json
+Susana: 2020-01-18 135 COVID-19.json ---> 2020-01-23 3199 COVID-19.json
+Estefani: 2020-01-26 200 COVID-19.json ---> 2020-01-30 1000 COVID-19.json
+
+For Febuary data:
+
+Huifeng: 2020-02-14 200 COVID-19.json ---> 2020-02-16 2999 COVID-19.json
+Hongjing: 2020-02-17 200 COVID-19.json ---> 2020-02-20 1800 COVID-19.json
+Susana: 2020-02-21 200 COVID-19.json ---> 2020-02-24 2600 COVID-19.json
+Estefani: 2020-02-25 200 COVID-19.json ---> 2020-02-29 3800 COVID-19.json
