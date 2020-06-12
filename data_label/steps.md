@@ -19,4 +19,5 @@ You can directly modify the original json file like:
 {"CONTENT"xxx,"REPLAY_TIME":[],"REPLAY_CONTENT":[],**"LABEL":"1"**},
 
 The lable 1 means **spam**
+
 The lable 0 means **non-spam**
