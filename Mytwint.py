@@ -109,8 +109,8 @@ def twintScraper(from_date=None, end_date=None):
             "REPLIIES_AMOUNT": [],
             "REPLAY_PEOPLE": [],
             "REPLAY_TIME": [],
-            "REPLAY_CONTENT": []
-
+            "REPLAY_CONTENT": [],
+            "MARK":[]
     }
     count =0
     for tweet in tweets_as_objects:
@@ -156,6 +156,7 @@ def twintScraper(from_date=None, end_date=None):
         dict_op["REPLAY_PEOPLE"].append(replies_people)
         dict_op["REPLAY_TIME"].append(replies_time)
         dict_op["REPLAY_CONTENT"].append(replies_content)
+        dict_op["MARK"].append("##############################")
         count+=1
         if (count%200==0 and count!=0) or count==len(tweets_as_objects):
             lastsavedtweetid = dict_op["TWEET_ID"][len(dict_op["TWEET_ID"])-1]
@@ -176,7 +177,8 @@ def twintScraper(from_date=None, end_date=None):
                 "REPLIIES_AMOUNT": [],
                 "REPLAY_PEOPLE": [],
                 "REPLAY_TIME": [],
-                "REPLAY_CONTENT": []
+                "REPLAY_CONTENT": [],
+                "MARK":[]
             }
         if count%1000==0 and count!=0:
             time.sleep(60.0)
